@@ -1,0 +1,287 @@
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 1 -c 1 http://localhost:5278/home/syncp
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/syncp
+Document Length:        9222 bytes
+
+Concurrency Level:      1
+Time taken for tests:   0.768 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      9689 bytes
+HTML transferred:       9222 bytes
+Requests per second:    1.30 [#/sec] (mean)
+Time per request:       767.811 [ms] (mean)
+Time per request:       767.811 [ms] (mean, across all concurrent requests)
+Transfer rate:          12.32 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:   768  768   0.0    768     768
+Waiting:      768  768   0.0    768     768
+Total:        768  768   0.0    768     768
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 1 -c 1 http://localhost:5278/home/sync
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/sync
+Document Length:        9223 bytes
+
+Concurrency Level:      1
+Time taken for tests:   1.857 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      9686 bytes
+HTML transferred:       9223 bytes
+Requests per second:    0.54 [#/sec] (mean)
+Time per request:       1856.513 [ms] (mean)
+Time per request:       1856.513 [ms] (mean, across all concurrent requests)
+Transfer rate:          5.10 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    1   0.0      1       1
+Processing:  1856 1856   0.0   1856    1856
+Waiting:     1856 1856   0.0   1856    1856
+Total:       1857 1857   0.0   1857    1857
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 10 -c 10 http://localhost:5278/home/sync
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/sync
+Document Length:        9223 bytes
+
+Concurrency Level:      10
+Time taken for tests:   4.868 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      96860 bytes
+HTML transferred:       92230 bytes
+Requests per second:    2.05 [#/sec] (mean)
+Time per request:       4868.238 [ms] (mean)
+Time per request:       486.824 [ms] (mean, across all concurrent requests)
+Transfer rate:          19.43 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       1
+Processing:  1847 2173 947.1   1862    4867
+Waiting:     1847 2173 947.1   1862    4867
+Total:       1847 2174 947.4   1862    4868
+
+Percentage of the requests served within a certain time (ms)
+  50%   1862
+  66%   1869
+  75%   1896
+  80%   1961
+  90%   4868
+  95%   4868
+  98%   4868
+  99%   4868
+ 100%   4868 (longest request)
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 10 -c 10 http://localhost:5278/home/sync
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/sync
+Document Length:        9223 bytes
+
+Concurrency Level:      10
+Time taken for tests:   1.928 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      96860 bytes
+HTML transferred:       92230 bytes
+Requests per second:    5.19 [#/sec] (mean)
+Time per request:       1927.705 [ms] (mean)
+Time per request:       192.771 [ms] (mean, across all concurrent requests)
+Transfer rate:          49.07 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       1
+Processing:  1800 1838  36.0   1825    1928
+Waiting:     1800 1838  36.0   1825    1928
+Total:       1800 1838  36.0   1826    1928
+
+Percentage of the requests served within a certain time (ms)
+  50%   1826
+  66%   1839
+  75%   1840
+  80%   1866
+  90%   1928
+  95%   1928
+  98%   1928
+  99%   1928
+ 100%   1928 (longest request)
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 10 -c 10 http://localhost:5278/home/syncp
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/syncp
+Document Length:        9222 bytes
+
+Concurrency Level:      10
+Time taken for tests:   1.272 seconds
+Complete requests:      10
+Failed requests:        2
+   (Connect: 0, Receive: 0, Length: 2, Exceptions: 0)
+Total transferred:      96892 bytes
+HTML transferred:       92222 bytes
+Requests per second:    7.86 [#/sec] (mean)
+Time per request:       1271.870 [ms] (mean)
+Time per request:       127.187 [ms] (mean, across all concurrent requests)
+Transfer rate:          74.40 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       1
+Processing:   632  820 238.3    822    1271
+Waiting:      632  820 238.3    822    1271
+Total:        632  820 238.3    822    1271
+
+Percentage of the requests served within a certain time (ms)
+  50%    822
+  66%    823
+  75%    825
+  80%   1219
+  90%   1271
+  95%   1271
+  98%   1271
+  99%   1271
+ 100%   1271 (longest request)
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 10 -c 10 http://localhost:5278/home/syncp
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/syncp
+Document Length:        9222 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.832 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      96890 bytes
+HTML transferred:       92220 bytes
+Requests per second:    12.02 [#/sec] (mean)
+Time per request:       832.007 [ms] (mean)
+Time per request:       83.201 [ms] (mean, across all concurrent requests)
+Transfer rate:          113.72 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       1
+Processing:   676  765  74.7    820     831
+Waiting:      676  765  74.7    820     831
+Total:        676  765  74.8    820     832
+
+Percentage of the requests served within a certain time (ms)
+  50%    820
+  66%    820
+  75%    820
+  80%    829
+  90%    832
+  95%    832
+  98%    832
+  99%    832
+ 100%    832 (longest request)
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 50 -c 50 http://localhost:5278/home/sync
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.0
+Server Hostname:        localhost
+Server Port:            5278
+
+Document Path:          /home/sync
+Document Length:        9223 bytes
+
+Concurrency Level:      50
+Time taken for tests:   5.660 seconds
+Complete requests:      50
+Failed requests:        0
+Total transferred:      484300 bytes
+HTML transferred:       461150 bytes
+Requests per second:    8.83 [#/sec] (mean)
+Time per request:       5659.977 [ms] (mean)
+Time per request:       113.200 [ms] (mean, across all concurrent requests)
+Transfer rate:          83.56 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       1
+Processing:  3632 4207 671.4   3842    5656
+Waiting:     3632 4207 671.5   3842    5656
+Total:       3633 4207 671.4   3842    5656
+
+Percentage of the requests served within a certain time (ms)
+  50%   3842
+  66%   4281
+  75%   4285
+  80%   4451
+  90%   5635
+  95%   5646
+  98%   5656
+  99%   5656
+ 100%   5656 (longest request)
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]> ab -n 50 -c 50 http://localhost:5278/home/syncp
+This is ApacheBench, Version 2.3 <$Revision: 1554214 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)...apr_pollset_poll: The timeout specified has expired (70007)
+C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync [master]>
