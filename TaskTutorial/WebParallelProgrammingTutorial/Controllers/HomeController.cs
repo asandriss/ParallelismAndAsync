@@ -26,6 +26,15 @@ namespace WebParallelProgrammingTutorial.Controllers
             return View("~/views/home/index.cshtml", data);
         }
 
+        public async Task<ActionResult> Async()
+        {
+            var sw = Stopwatch.StartNew();
+            var data = await GetVideosAsync();
+            sw.Stop();
+            ViewBag.Elapsed = sw.ElapsedMilliseconds;
+            return View("~/views/home/index.cshtml", data);
+        }
+
         public ActionResult SyncP()
         {
             var sw = Stopwatch.StartNew();
@@ -41,6 +50,17 @@ namespace WebParallelProgrammingTutorial.Controllers
             foreach (var url in sources)
             {
                 allVideos.Add(DownloadData(url));
+            }
+
+            return allVideos;
+        }
+
+        private async Task<IEnumerable<IEnumerable<Video>>> GetVideosAsync()
+        {
+            var allVideos = new List<IEnumerable<Video>>();
+            foreach (var url in sources)
+            {
+                allVideos.Add(await DownloadDataAsync(url));
             }
 
             return allVideos;
@@ -66,18 +86,13 @@ namespace WebParallelProgrammingTutorial.Controllers
             return httpResponseMessage.Content.ReadAsAsync<IEnumerable<Video>>().Result;
         }
 
-        public ActionResult About()
+        private async Task<IEnumerable<Video>> DownloadDataAsync(string url)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.GetAsync(url);
+            httpResponseMessage.EnsureSuccessStatusCode();
+            return await httpResponseMessage.Content.ReadAsAsync<IEnumerable<Video>>();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

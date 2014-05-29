@@ -1,9 +1,0 @@
-c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\ParallelProgrammingTutorial\bin\Debug\ParallelProgrammingTutorial.exe.config
-c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\ParallelProgrammingTutorial\bin\Debug\ParallelProgrammingTutorial.exe
-c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\ParallelProgrammingTutorial\bin\Debug\ParallelProgrammingTutorial.pdb
-c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\ParallelProgrammingTutorial\obj\Debug\ParallelProgrammingTutorial.csprojResolveAssemblyReference.cache
-c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\ParallelProgrammingTutorial\obj\Debug\ParallelProgrammingTutorial.exe
-c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\ParallelProgrammingTutorial\obj\Debug\ParallelProgrammingTutorial.pdb
-C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync\TaskTutorial\ParallelProgrammingTutorial\bin\Debug\ParallelProgrammingTutorial.exe.config
-C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync\TaskTutorial\ParallelProgrammingTutorial\obj\Debug\ParallelProgrammingTutorial.exe
-C:\Users\Fedor\Documents\Visual Studio 2013\Projects\ParallelismAndAsync\TaskTutorial\ParallelProgrammingTutorial\obj\Debug\ParallelProgrammingTutorial.pdb
