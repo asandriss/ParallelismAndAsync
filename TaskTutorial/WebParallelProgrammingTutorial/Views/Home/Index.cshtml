@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@model IEnumerable<IEnumerable<WebParallelProgrammingTutorial.Models.Video>>
+
+<table>
+    @foreach (var memberVideo in Model)
+    {
+        <tr>
+            @foreach (var video in memberVideo)
+            { 
+                <td>
+                    <div>@video.Title</div>
+                    <div><img src="http://matlusstorage.blob.core.windows.net/membervideos/@video.ImageUrl" style="width:185px;" /></div>
+                </td>
+            }
+        </tr>
+    }
+</table>
+<h2>@ViewBag.Elapsed</h2>

@@ -1,0 +1,1 @@
+c:\users\fedor\documents\visual studio 2013\Projects\TaskTutorial\TaskTutorial\bin\Debug\TaskTutorial.exe.config
