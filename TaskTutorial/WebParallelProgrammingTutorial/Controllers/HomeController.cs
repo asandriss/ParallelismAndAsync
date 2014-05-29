@@ -57,12 +57,14 @@ namespace WebParallelProgrammingTutorial.Controllers
 
         private async Task<IEnumerable<IEnumerable<Video>>> GetVideosAsync()
         {
-            var allVideos = new List<IEnumerable<Video>>();
+            var allVideoTasks = new List<Task<IEnumerable<Video>>>();
             foreach (var url in sources)
             {
-                allVideos.Add(await DownloadDataAsync(url));
+                allVideoTasks.Add(DownloadDataAsync(url));
             }
 
+            // use one await for all task, or.. wait them all.
+            var allVideos = await Task.WhenAll(allVideoTasks);
             return allVideos;
         }
 
